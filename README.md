@@ -24,7 +24,7 @@ require __DIR__ . '/vendor/autoload.php';
 $vsm = new VideoServiceMatcher();
 
 //Detects which service the url belongs to and returns the service's implementation
-//of RicardoFiorani\Adapter\VideoAdapterInterface
+//of Adn\PhpVideoUrlParser\Adapter\VideoAdapterInterface
 $video = $vsm->parse('https://www.youtube.com/watch?v=PkOcm_XaWrw');
 
 //Checks if service provides embeddable videos (most services does)
@@ -55,7 +55,7 @@ echo $video->getLargestThumbnail();
 ```
 
 ## Registering your own service video (it's easy !)
-If you want to register an implementation of some service your class just needs to implement the "RicardoFiorani\Adapter\VideoAdapterInterface" or extend the RicardoFiorani\Adapter\AbstractServiceAdapter
+If you want to register an implementation of some service your class just needs to implement the "Adn\PhpVideoUrlParser\Adapter\VideoAdapterInterface" or extend the Adn\PhpVideoUrlParser\Adapter\AbstractServiceAdapter
 
 A Fully functional example can be found [Here](https://github.com/ricardofiorani/php-video-url-parser/tree/master/documentation/RegisteringANewService.md).
 

@@ -1,6 +1,6 @@
 # Functional Example of Integrating your own renderer
 In this project I've used a simple renderer (which just does an echo of an iframe) but you can use your own implementation. 
-First, It must follow the RicardoFiorani\Renderer\EmbedRendererInterface interface.
+First, It must follow the Adn\PhpVideoUrlParser\Renderer\EmbedRendererInterface interface.
 
 Basically you need two classes:
 
@@ -12,7 +12,7 @@ The examples can be seem below:
 ### My Renderer Implementation Class
 This is the concrete implementation on how your renderer is going to handle the embed URL to give you an embed code.
 In here you can inject any dependency you might need by the constructor and add any logic you need.
-Please note that it should implement the interface "\RicardoFiorani\Renderer\EmbedRendererInterface".
+Please note that it should implement the interface "\Adn\PhpVideoUrlParser\Renderer\EmbedRendererInterface".
 ```php
 <?php
 namespace MyVendor\MyRenderer;
@@ -37,7 +37,7 @@ class MyOwnRenderer implements EmbedRendererInterface
 }
 ```
 ### My Renderer Implementation Factory Class
-This is the Factory of your renderer, basically all it must do is to implement the interface RicardoFiorani\Renderer\Factory\RendererFactoryInterface
+This is the Factory of your renderer, basically all it must do is to implement the interface Adn\PhpVideoUrlParser\Renderer\Factory\RendererFactoryInterface
 ```php
 <?php
 namespace MyVendor\MyRenderer\Factory;

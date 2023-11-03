@@ -1,6 +1,6 @@
 {
     "name": "serviceinfoadn/php-video-url-parser",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A Simple and efficient PHP Video URL Parser that gives you thumbnails and embed codes for various services as Youtube, Vimeo, DailyMotion and Facebook",
     "require-dev": {
         "phpunit/phpunit": "^4.8",
