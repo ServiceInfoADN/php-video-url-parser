@@ -1,18 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ricardo Fiorani
- * Date: 10/02/2016
- * Time: 16:10
- */
 
-namespace RicardoFiorani\Test\Adapter;
+namespace Adn\PhpVideoUrlParser\Test\Adapter;
 
 
 use PHPUnit_Framework_TestCase;
-use RicardoFiorani\Adapter\Youtube\YoutubeServiceAdapter;
-use RicardoFiorani\Matcher\VideoServiceMatcher;
-use RicardoFiorani\Exception\ServiceNotAvailableException;
+use Adn\PhpVideoUrlParser\Adapter\Youtube\YoutubeServiceAdapter;
+use Adn\PhpVideoUrlParser\Matcher\VideoServiceMatcher;
+use Adn\PhpVideoUrlParser\Exception\ServiceNotAvailableException;
 
 class YoutubeServiceAdapterTest extends PHPUnit_Framework_TestCase
 {
@@ -67,7 +61,7 @@ class YoutubeServiceAdapterTest extends PHPUnit_Framework_TestCase
     public function testThrowsExceptionOnRequestThumbnailWithAnInvalidSize($url)
     {
         $youtubeVideo = $this->getMockingObject($url);
-        $this->setExpectedException('\\RicardoFiorani\\Exception\\InvalidThumbnailSizeException');
+        $this->setExpectedException('\\Adn\\PhpVideoUrlParser\\Exception\\InvalidThumbnailSizeException');
         $youtubeVideo->getThumbnail('This Size does not exists :)');
     }
 

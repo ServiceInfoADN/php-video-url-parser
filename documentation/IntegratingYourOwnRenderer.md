@@ -16,7 +16,7 @@ Please note that it should implement the interface "\RicardoFiorani\Renderer\Emb
 ```php
 <?php
 namespace MyVendor\MyRenderer;
-use \RicardoFiorani\Renderer\EmbedRendererInterface;
+use \Adn\PhpVideoUrlParser\Renderer\EmbedRendererInterface;
 
 class MyOwnRenderer implements EmbedRendererInterface
 {
@@ -41,8 +41,8 @@ This is the Factory of your renderer, basically all it must do is to implement t
 ```php
 <?php
 namespace MyVendor\MyRenderer\Factory;
-use RicardoFiorani\Renderer\EmbedRendererInterface;
-use RicardoFiorani\Renderer\Factory\RendererFactoryInterface;
+use Adn\PhpVideoUrlParser\Renderer\EmbedRendererInterface;
+use Adn\PhpVideoUrlParser\Renderer\Factory\RendererFactoryInterface;
 
 class MyOwnRendererFactory implements RendererFactoryInterface
 {
@@ -61,7 +61,7 @@ The last part is attaching your own renderer service to the VideoServiceMatcher,
 
 ```php
 <?php
-use RicardoFiorani\Matcher\VideoServiceMatcher;
+use Adn\PhpVideoUrlParser\Matcher\VideoServiceMatcher;
 
 require __DIR__ . '/vendor/autoload.php';
 

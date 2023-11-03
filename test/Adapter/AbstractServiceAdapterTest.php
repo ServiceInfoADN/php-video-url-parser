@@ -1,18 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ricardo Fiorani
- * Date: 10/02/2016
- * Time: 18:55
- */
 
-namespace RicardoFiorani\Test\Adapter;
+namespace Adn\PhpVideoUrlParser\Test\Adapter;
 
 use PHPUnit_Framework_TestCase;
-use RicardoFiorani\Adapter\Facebook\FacebookServiceAdapter;
-use RicardoFiorani\Exception\ServiceNotAvailableException;
-use RicardoFiorani\Matcher\VideoServiceMatcher;
-use RicardoFiorani\Renderer\DefaultRenderer;
+use Adn\PhpVideoUrlParser\Adapter\Facebook\FacebookServiceAdapter;
+use Adn\PhpVideoUrlParser\Exception\ServiceNotAvailableException;
+use Adn\PhpVideoUrlParser\Matcher\VideoServiceMatcher;
+use Adn\PhpVideoUrlParser\Renderer\DefaultRenderer;
 
 class AbstractServiceAdapterTest extends PHPUnit_Framework_TestCase
 {

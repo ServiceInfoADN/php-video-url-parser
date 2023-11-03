@@ -1,15 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ricardo Fiorani
- * Date: 29/08/2015
- * Time: 14:56.
- */
-namespace RicardoFiorani\Adapter\Vimeo\Factory;
+namespace Adn\PhpVideoUrlParser\Adapter\Vimeo\Factory;
 
-use RicardoFiorani\Adapter\CallableServiceAdapterFactoryInterface;
-use RicardoFiorani\Adapter\Vimeo\VimeoServiceAdapter;
-use RicardoFiorani\Renderer\EmbedRendererInterface;
+use Adn\PhpVideoUrlParser\Adapter\CallableServiceAdapterFactoryInterface;
+use Adn\PhpVideoUrlParser\Adapter\Vimeo\VimeoServiceAdapter;
+use Adn\PhpVideoUrlParser\Renderer\EmbedRendererInterface;
 
 class VimeoServiceAdapterFactory implements CallableServiceAdapterFactoryInterface
 {
@@ -24,8 +18,6 @@ class VimeoServiceAdapterFactory implements CallableServiceAdapterFactoryInterfa
      */
     public function __invoke($url, $pattern, EmbedRendererInterface $renderer)
     {
-        $adapter = new VimeoServiceAdapter($url, $pattern, $renderer);
-
-        return $adapter;
+        return new VimeoServiceAdapter($url, $pattern, $renderer);
     }
 }

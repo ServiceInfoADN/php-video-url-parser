@@ -1,14 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ricardo Fiorani
- * Date: 29/08/2015
- * Time: 19:37.
- */
-namespace RicardoFiorani\Adapter;
+namespace Adn\PhpVideoUrlParser\Adapter;
 
-use RicardoFiorani\Exception\NotEmbeddableException;
-use RicardoFiorani\Renderer\EmbedRendererInterface;
+use Adn\PhpVideoUrlParser\Exception\NotEmbeddableException;
+use Adn\PhpVideoUrlParser\Renderer\EmbedRendererInterface;
 
 abstract class AbstractServiceAdapter implements VideoAdapterInterface
 {
@@ -123,7 +117,7 @@ abstract class AbstractServiceAdapter implements VideoAdapterInterface
      */
     public function getEmbedCode($width, $height, $forceAutoplay = false, $forceSecure = false)
     {
-        if (false == $this->isEmbeddable()) {
+        if (!$this->isEmbeddable()) {
             throw new NotEmbeddableException();
         }
 

@@ -1,18 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ricardo Fiorani
- * Date: 10/02/2016
- * Time: 17:27
- */
 
-namespace RicardoFiorani\Test\Adapter;
+namespace Adn\PhpVideoUrlParser\Test\Adapter;
 
 
 use PHPUnit_Framework_TestCase;
-use RicardoFiorani\Adapter\Vimeo\VimeoServiceAdapter;
-use RicardoFiorani\Matcher\VideoServiceMatcher;
-use RicardoFiorani\Exception\ServiceNotAvailableException;
+use Adn\PhpVideoUrlParser\Adapter\Vimeo\VimeoServiceAdapter;
+use Adn\PhpVideoUrlParser\Matcher\VideoServiceMatcher;
+use Adn\PhpVideoUrlParser\Exception\ServiceNotAvailableException;
 
 class VimeoServiceAdapterTest extends PHPUnit_Framework_TestCase
 {
@@ -87,7 +81,7 @@ class VimeoServiceAdapterTest extends PHPUnit_Framework_TestCase
     public function testThrowsExceptionOnRequestThumbnailWithAnInvalidSize($url)
     {
         $vimeoVideo = $this->getMockingObject($url);
-        $this->setExpectedException('\\RicardoFiorani\\Exception\\InvalidThumbnailSizeException');
+        $this->setExpectedException('\\Adn\\PhpVideoUrlParser\\Exception\\InvalidThumbnailSizeException');
         $vimeoVideo->getThumbnail('This Size does not exists :)');
     }
 

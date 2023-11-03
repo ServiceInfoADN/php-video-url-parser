@@ -1,15 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ricardo Fiorani
- * Date: 30/08/2015
- * Time: 14:38.
- */
-namespace RicardoFiorani\Adapter\Dailymotion;
+namespace Adn\PhpVideoUrlParser\Adapter\Dailymotion;
 
-use RicardoFiorani\Adapter\AbstractServiceAdapter;
-use RicardoFiorani\Exception\InvalidThumbnailSizeException;
-use RicardoFiorani\Renderer\EmbedRendererInterface;
+use Adn\PhpVideoUrlParser\Adapter\AbstractServiceAdapter;
+use Adn\PhpVideoUrlParser\Exception\InvalidThumbnailSizeException;
+use Adn\PhpVideoUrlParser\Renderer\EmbedRendererInterface;
 
 class DailymotionServiceAdapter extends AbstractServiceAdapter
 {

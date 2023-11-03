@@ -1,16 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ricardo Fiorani
- * Date: 29/08/2015
- * Time: 14:56.
- */
-namespace RicardoFiorani\Adapter\Vimeo;
+namespace Adn\PhpVideoUrlParser\Adapter\Vimeo;
 
-use RicardoFiorani\Adapter\AbstractServiceAdapter;
-use RicardoFiorani\Exception\InvalidThumbnailSizeException;
-use RicardoFiorani\Exception\ServiceApiNotAvailable;
-use RicardoFiorani\Renderer\EmbedRendererInterface;
+use Adn\PhpVideoUrlParser\Adapter\AbstractServiceAdapter;
+use Adn\PhpVideoUrlParser\Exception\InvalidThumbnailSizeException;
+use Adn\PhpVideoUrlParser\Exception\ServiceApiNotAvailable;
+use Adn\PhpVideoUrlParser\Renderer\EmbedRendererInterface;
 
 class VimeoServiceAdapter extends AbstractServiceAdapter
 {
@@ -238,8 +232,6 @@ class VimeoServiceAdapter extends AbstractServiceAdapter
 
     /**
      * Uses the Vimeo video API to get video info.
-     *
-     * @todo make this better by using guzzle
      *
      * @return array
      *

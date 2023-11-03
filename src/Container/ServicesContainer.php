@@ -1,15 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ricardo Fiorani
- * Date: 31/08/2015
- * Time: 21:06.
- */
-namespace RicardoFiorani\Container;
+namespace Adn\PhpVideoUrlParser\Container;
 
-use RicardoFiorani\Adapter\CallableServiceAdapterFactoryInterface;
-use RicardoFiorani\Exception\DuplicatedServiceNameException;
-use RicardoFiorani\Renderer\EmbedRendererInterface;
+use Adn\PhpVideoUrlParser\Adapter\CallableServiceAdapterFactoryInterface;
+use Adn\PhpVideoUrlParser\Exception\DuplicatedServiceNameException;
+use Adn\PhpVideoUrlParser\Renderer\EmbedRendererInterface;
 
 class ServicesContainer
 {
@@ -50,7 +44,7 @@ class ServicesContainer
      */
     public function __construct(array $config = array())
     {
-        if (false == empty($config)) {
+        if (!empty($config)) {
             $this->registerFromConfig($config);
         }
     }

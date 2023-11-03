@@ -1,16 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ricardo Fiorani
- * Date: 02/09/2015
- * Time: 22:42.
- */
-namespace RicardoFiorani\Adapter\Facebook;
+namespace Adn\PhpVideoUrlParser\Adapter\Facebook;
 
-use RicardoFiorani\Adapter\AbstractServiceAdapter;
-use RicardoFiorani\Exception\InvalidThumbnailSizeException;
-use RicardoFiorani\Exception\ThumbnailSizeNotAvailable;
-use RicardoFiorani\Renderer\EmbedRendererInterface;
+use Adn\PhpVideoUrlParser\Adapter\AbstractServiceAdapter;
+use Adn\PhpVideoUrlParser\Exception\InvalidThumbnailSizeException;
+use Adn\PhpVideoUrlParser\Exception\ThumbnailSizeNotAvailable;
+use Adn\PhpVideoUrlParser\Renderer\EmbedRendererInterface;
 
 class FacebookServiceAdapter extends AbstractServiceAdapter
 {
@@ -71,7 +65,7 @@ class FacebookServiceAdapter extends AbstractServiceAdapter
      */
     public function getThumbnail($size, $forceSecure = false)
     {
-        if (false == in_array($size, $this->getThumbNailSizes())) {
+        if (!in_array($size, $this->getThumbNailSizes())) {
             throw new InvalidThumbnailSizeException();
         }
 

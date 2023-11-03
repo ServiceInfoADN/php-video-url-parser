@@ -1,17 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ricardo Fiorani
- * Date: 31/08/2015
- * Time: 21:54
- */
 
-namespace RicardoFiorani\Test\Detector;
+namespace Adn\PhpVideoUrlParser\Test\Detector;
 
 use PHPUnit_Framework_TestCase;
-use RicardoFiorani\Container\Factory\ServicesContainerFactory;
-use RicardoFiorani\Matcher\VideoServiceMatcher;
-use RicardoFiorani\Exception\ServiceNotAvailableException;
+use Adn\PhpVideoUrlParser\Container\Factory\ServicesContainerFactory;
+use Adn\PhpVideoUrlParser\Matcher\VideoServiceMatcher;
+use Adn\PhpVideoUrlParser\Exception\ServiceNotAvailableException;
 
 class VideoServiceMatcherTest extends PHPUnit_Framework_TestCase
 {
@@ -37,27 +31,27 @@ class VideoServiceMatcherTest extends PHPUnit_Framework_TestCase
         return array(
             'Normal Youtube URL' => array(
                 'https://www.youtube.com/watch?v=mWRsgZuwf_8',
-                '\\RicardoFiorani\\Adapter\\Youtube\\YoutubeServiceAdapter',
+                '\\Adn\\PhpVideoUrlParser\\Adapter\\Youtube\\YoutubeServiceAdapter',
             ),
             'Short Youtube URL' => array(
                 'https://youtu.be/JMLBOKVfHaA',
-                'RicardoFiorani\\Adapter\\Youtube\\YoutubeServiceAdapter',
+                '\\Adn\\PhpVideoUrlParser\\Adapter\\Youtube\\YoutubeServiceAdapter',
             ),
             'Embed Youtube URL' => array(
                 '<iframe width="420" height="315" src="https://www.youtube.com/embed/vwp9JkaESdg" frameborder="0" allowfullscreen></iframe>',
-                '\\RicardoFiorani\\Adapter\\Youtube\\YoutubeServiceAdapter',
+                '\\Adn\\PhpVideoUrlParser\\Adapter\\Youtube\\YoutubeServiceAdapter',
             ),
             'Common Vimeo URL' => array(
                 'https://vimeo.com/137781541',
-                '\\RicardoFiorani\\Adapter\\Vimeo\\VimeoServiceAdapter',
+                '\\Adn\\PhpVideoUrlParser\\Adapter\\Vimeo\\VimeoServiceAdapter',
             ),
             'Commom Dailymotion URL' => array(
                 'http://www.dailymotion.com/video/x332a71_que-categoria-jogador-lucas-lima-faz-golaco-em-treino-do-santos_sport',
-                '\\RicardoFiorani\\Adapter\\Dailymotion\\DailymotionServiceAdapter',
+                '\\Adn\\PhpVideoUrlParser\\Adapter\\Dailymotion\\DailymotionServiceAdapter',
             ),
             'Commom Facebook Video URL' => array(
                 'https://www.facebook.com/RantPets/videos/583336855137988/',
-                '\\RicardoFiorani\\Adapter\\Facebook\\FacebookServiceAdapter',
+                '\\Adn\\PhpVideoUrlParser\\Adapter\\Facebook\\FacebookServiceAdapter',
             )
         );
     }
@@ -69,7 +63,7 @@ class VideoServiceMatcherTest extends PHPUnit_Framework_TestCase
     public function testThrowsExceptionOnInvalidUrl($url)
     {
         $detector = new VideoServiceMatcher();
-        $this->setExpectedException('\\RicardoFiorani\\Exception\\ServiceNotAvailableException');
+        $this->setExpectedException('\\Adn\\PhpVideoUrlParser\\Exception\\ServiceNotAvailableException');
         $video = $detector->parse($url);
     }
 
@@ -110,7 +104,7 @@ class VideoServiceMatcherTest extends PHPUnit_Framework_TestCase
     public function testServiceContainerGetter()
     {
         $detector = new VideoServiceMatcher();
-        $this->assertInstanceOf('RicardoFiorani\\Container\\ServicesContainer', $detector->getServiceContainer());
+        $this->assertInstanceOf('\\Adn\\PhpVideoUrlParser\\Container\\ServicesContainer', $detector->getServiceContainer());
     }
 
     /**

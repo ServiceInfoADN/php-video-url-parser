@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ricardo Fiorani
- * Date: 29/08/2015
- * Time: 14:34
- */
-
 return array(
     'services' => array(
         'Vimeo' => array(
@@ -13,20 +6,20 @@ return array(
                 '#(https?://vimeo.com)/([0-9]+)#i',
                 '#(https?://vimeo.com)/channels/staffpicks/([0-9]+)#i',
             ),
-            'factory' => '\\RicardoFiorani\\Adapter\\Vimeo\\Factory\\VimeoServiceAdapterFactory',
+            'factory' => '\\Adn\\PhpVideoUrlParser\\Adapter\\Vimeo\\Factory\\VimeoServiceAdapterFactory',
         ),
         'Youtube' => array(
             'patterns' => array(
                 '#(?:<\>]+href=\")?(?:http://)?((?:[a-zA-Z]{1,4}\.)?youtube.com/(?:watch)?\?v=(.{11}?))[^"]*(?:\"[^\<\>]*>)?([^\<\>]*)(?:)?#',
                 '%(?:youtube\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i',
             ),
-            'factory' => '\\RicardoFiorani\\Adapter\\Youtube\\Factory\\YoutubeServiceAdapterFactory',
+            'factory' => '\\Adn\\PhpVideoUrlParser\\Adapter\\Youtube\\Factory\\YoutubeServiceAdapterFactory',
         ),
         'Dailymotion' => array(
             'patterns' => array(
                 '#https?://www.dailymotion.com/video/([A-Za-z0-9]+)#s',
             ),
-            'factory' => '\\RicardoFiorani\\Adapter\\Dailymotion\\Factory\\DailymotionServiceAdapterFactory',
+            'factory' => '\\Adn\\PhpVideoUrlParser\\Adapter\\Dailymotion\\Factory\\DailymotionServiceAdapterFactory',
         ),
         'Facebook' => array(
             'patterns' => array(
@@ -35,11 +28,11 @@ return array(
                 '~^https?://www\.facebook\.com/.*?/videos/(\d+)/?$~m',
 
             ),
-            'factory' => '\\RicardoFiorani\\Adapter\\Facebook\\Factory\\FacebookServiceAdapterFactory',
+            'factory' => '\\Adn\\PhpVideoUrlParser\\Adapter\\Facebook\\Factory\\FacebookServiceAdapterFactory',
         ),
     ),
     'renderer' => array(
         'name' => 'DefaultRenderer',
-        'factory' => '\\RicardoFiorani\\Renderer\\Factory\\DefaultRendererFactory',
+        'factory' => '\\Adn\\PhpVideoUrlParser\\Renderer\\Factory\\DefaultRendererFactory',
     )
 );

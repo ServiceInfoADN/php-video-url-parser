@@ -1,14 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ricardo Fiorani
- * Date: 29/08/2015
- * Time: 14:57.
- */
-namespace RicardoFiorani\Adapter;
+namespace Adn\PhpVideoUrlParser\Adapter;
 
-use RicardoFiorani\Adapter\VideoAdapterInterface;
-use RicardoFiorani\Renderer\EmbedRendererInterface;
+use Adn\PhpVideoUrlParser\Adapter\VideoAdapterInterface;
+use Adn\PhpVideoUrlParser\Renderer\EmbedRendererInterface;
 
 interface CallableServiceAdapterFactoryInterface
 {

@@ -1,16 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ricardo Fiorani
- * Date: 10/02/2016
- * Time: 18:45
- */
 
-namespace RicardoFiorani\Test\Renderer;
+namespace Adn\PhpVideoUrlParser\Test\Renderer;
 
 
 use PHPUnit_Framework_TestCase;
-use RicardoFiorani\Renderer\DefaultRenderer;
+use Adn\PhpVideoUrlParser\Renderer\DefaultRenderer;
 
 class DefaultRendererTest extends PHPUnit_Framework_TestCase
 {

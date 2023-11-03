@@ -1,13 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ricardo Fiorani
- * Date: 30/08/2015
- * Time: 01:09.
- */
-namespace RicardoFiorani\Renderer\Factory;
+namespace Adn\PhpVideoUrlParser\Renderer\Factory;
 
-use RicardoFiorani\Renderer\EmbedRendererInterface;
+use Adn\PhpVideoUrlParser\Renderer\EmbedRendererInterface;
 
 interface RendererFactoryInterface
 {

@@ -1,15 +1,12 @@
 <?php
 
-namespace RicardoFiorani\Matcher;
+namespace Adn\PhpVideoUrlParser\Matcher;
 
-use RicardoFiorani\Adapter\VideoAdapterInterface;
-use RicardoFiorani\Container\Factory\ServicesContainerFactory;
-use RicardoFiorani\Container\ServicesContainer;
-use RicardoFiorani\Exception\ServiceNotAvailableException;
+use Adn\PhpVideoUrlParser\Adapter\VideoAdapterInterface;
+use Adn\PhpVideoUrlParser\Container\Factory\ServicesContainerFactory;
+use Adn\PhpVideoUrlParser\Container\ServicesContainer;
+use Adn\PhpVideoUrlParser\Exception\ServiceNotAvailableException;
 
-/**
- * @author Ricardo Fiorani
- */
 class VideoServiceMatcher
 {
     /**

@@ -1,9 +1,5 @@
 <?php
-/**
- * @author Ricardo Fiorani
- */
-
-namespace RicardoFiorani\Renderer;
+namespace Adn\PhpVideoUrlParser\Renderer;
 
 class DefaultRenderer implements EmbedRendererInterface
 {

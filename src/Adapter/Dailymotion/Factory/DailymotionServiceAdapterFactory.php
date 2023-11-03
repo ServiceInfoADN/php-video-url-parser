@@ -1,16 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ricardo Fiorani
- * Date: 30/08/2015
- * Time: 14:40.
- */
-namespace RicardoFiorani\Adapter\Dailymotion\Factory;
+namespace Adn\PhpVideoUrlParser\Adapter\Dailymotion\Factory;
 
-use RicardoFiorani\Adapter\Dailymotion\DailymotionServiceAdapter;
-use RicardoFiorani\Adapter\CallableServiceAdapterFactoryInterface;
-use RicardoFiorani\Adapter\VideoAdapterInterface;
-use RicardoFiorani\Renderer\EmbedRendererInterface;
+use Adn\PhpVideoUrlParser\Adapter\Dailymotion\DailymotionServiceAdapter;
+use Adn\PhpVideoUrlParser\Adapter\CallableServiceAdapterFactoryInterface;
+use Adn\PhpVideoUrlParser\Adapter\VideoAdapterInterface;
+use Adn\PhpVideoUrlParser\Renderer\EmbedRendererInterface;
 
 class DailymotionServiceAdapterFactory implements CallableServiceAdapterFactoryInterface
 {
@@ -23,8 +17,6 @@ class DailymotionServiceAdapterFactory implements CallableServiceAdapterFactoryI
      */
     public function __invoke($url, $pattern, EmbedRendererInterface $renderer)
     {
-        $dailyMotionServiceAdapter = new DailymotionServiceAdapter($url, $pattern, $renderer);
-
-        return $dailyMotionServiceAdapter;
+        return new DailymotionServiceAdapter($url, $pattern, $renderer);
     }
 }

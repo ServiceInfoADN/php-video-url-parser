@@ -149,8 +149,8 @@ class DailymotionServiceAdapter extends AbstractServiceAdapter
 namespace MyVendor\ServiceAdapter\Factory;
 
 use MyVendor\ServiceAdapter\DailymotionServiceAdapter;
-use RicardoFiorani\Adapter\VideoAdapterInterface;
-use RicardoFiorani\Renderer\EmbedRendererInterface;
+use Adn\PhpVideoUrlParser\Adapter\VideoAdapterInterface;
+use Adn\PhpVideoUrlParser\Renderer\EmbedRendererInterface;
 
 class DailymotionServiceAdapterFactory implements \RicardoFiorani\Adapter\CallableServiceAdapterFactoryInterface
 {
@@ -162,9 +162,7 @@ class DailymotionServiceAdapterFactory implements \RicardoFiorani\Adapter\Callab
      */
     public function __invoke($url, $pattern, EmbedRendererInterface $renderer)
     {
-        $dailyMotionServiceAdapter = new DailymotionServiceAdapter($url, $pattern, $renderer);
-
-        return $dailyMotionServiceAdapter;
+        return new DailymotionServiceAdapter($url, $pattern, $renderer);
     }
 }
 ```
@@ -173,7 +171,7 @@ class DailymotionServiceAdapterFactory implements \RicardoFiorani\Adapter\Callab
 
 ```php
 <?php
-use RicardoFiorani\Matcher\VideoServiceMatcher;
+use Adn\PhpVideoUrlParser\Matcher\VideoServiceMatcher;
 
 require __DIR__ . '/vendor/autoload.php';
 
